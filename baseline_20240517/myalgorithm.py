@@ -5,7 +5,7 @@ def algorithm(K, all_orders, all_riders, dist_mat, timelimit=60):
 
     start_time = time.time()
 
-    for r in all_riders:
+    for r in all_riders: # (종류, speed, capa, var_cost, fixed_cost, service_time, available_number)
         r.T = np.round(dist_mat/r.speed + r.service_time)
 
     # A solution is a list of bundles
