@@ -3,7 +3,7 @@
 from util import *
 from myalgorithm import algorithm
 
-problem_file = '../alg_test_problems_20240429/TEST_K100_1.json'
+problem_file = '../stage1_problems/STAGE1_1.json'
 timelimit = 10
 
 

@@ -1,7 +1,7 @@
 from util import *
 
 
-def algorithm(K, all_orders, all_riders, dist_mat, timelimit=60):
+def algorithm(K, all_orders, all_riders, dist_mat, timelimit=600000):
 
     start_time = time.time()
 
@@ -37,7 +37,7 @@ def algorithm(K, all_orders, all_riders, dist_mat, timelimit=60):
         
         while iter < max_merge_iter:
 
-            bundle1, bundle2 = select_two_bundles(all_bundles)
+            bundle1, bundle2 = select_two_bundles(all_bundles, all_riders, dist_mat)
             new_bundle = try_merging_bundles(K, dist_mat, all_orders, bundle1, bundle2)
 
             if new_bundle is not None:
